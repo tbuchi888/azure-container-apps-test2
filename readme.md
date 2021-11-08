@@ -1,4 +1,4 @@
-# demo-container-app Private
+# demo-container-app
 This is demo page of js on Nginx on Docker and k8s. 
 But these are still being verified.
 + js demo page.
