@@ -52,9 +52,9 @@ jobs:
       - name: Deploy to containerapp
         uses: azure/CLI@v1
         with:
-          azcliversion: 2.20.0
+          azcliversion: 2.30.0
           inlineScript: |
             echo "Installing containerapp extension"
-            az extension add --source https://workerappscliextension.blob.core.windows.net/azure-cli-extension/containerapp-0.1.12-py2.py3-none-any.whl --yes
+            az extension add --source https://workerappscliextension.blob.core.windows.net/azure-cli-extension/containerapp-0.2.0-py2.py3-none-any.whl --yes
             echo "Starting Deploying"
             az containerapp update -n demo-container-app -g demo_container_app -i tkawabuchi.azurecr.io/demo-container-app:${{ github.sha }} --registry-login-server tkawabuchi.azurecr.io --registry-username  ${{ secrets.REGISTRY_USERNAME }} --registry-password ${{ secrets.REGISTRY_PASSWORD }} --debug
